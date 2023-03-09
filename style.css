@@ -1,0 +1,262 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.main{
+    max-width: 800px;
+    margin: auto;
+    padding: 50px;
+}
+form{
+    border: 1px solid  rgba(86,148,255,0.45);
+    padding: 15px;
+}
+
+
+.input{
+    display: none;
+}
+.fake{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid  rgba(86,148,255,0.45);
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+}
+.fake::before{
+    content: '';
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: 0.2s;
+}
+.input:checked + .fake::before{
+    opacity: 1;
+}
+.input:checked + .fake {
+
+    border: 2px solid blue;
+}
+.label_radio{
+    padding: 15px 0 10px 10px;
+    border: 2px solid  rgba(86,148,255,0.45);
+    width: 300px;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+.label_radio:hover {
+    border: 2px solid blue;
+}
+.label_radio:active {
+    border: 2px solid darkblue;
+}
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.subtext{
+    padding-left: 33px;
+    color: grey;
+}
+
+.container_two{
+    background-color: #ebf5ff;
+    margin: 0 -15px -15px;
+    padding: 15px;
+}
+
+.container_two > ul{
+    display: flex;
+   list-style-type: none;
+    justify-content: space-around;
+}
+.container_two > ul > li{
+
+}
+
+.row >p{
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.row >div {
+    margin-bottom: 25px;
+}
+.row_p >p{
+    margin-bottom: 42px;
+}
+
+select{
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid rgba(86,148,255,0.45);
+    border-radius: 3px;
+    background: white;
+
+    /*background-size: 2em 2em;*/
+    /*background-position: right -3px center;*/
+    /*border: 1px solid #ccc;*/
+    /*border-radius: 4px;*/
+    /*outline: none;*/
+
+    padding: 0 .5em;
+    flex: 1;
+    cursor: pointer;
+    font-size: 1em;
+
+
+}
+
+
+.select{
+    /*display: inline-flex;*/
+    /*min-height: 2.75rem;*/
+    /*width: 100%;*/
+    position: relative;
+    display: flex;
+    width: 10em;
+    min-height: 2.75rem;
+    line-height: 3;
+    overflow: hidden;
+    border-radius: 3px;
+
+}
+
+.select::after{
+    content: '\25BC' ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgba(49,157,169,0.06);
+    cursor: pointer;
+    pointer-events: none;
+    transition: .25s all ease ;
+    color: rgba(86,148,255,0.45);
+}
+.select:hover::after{
+    color: blue;
+}
+.btn_container{
+    display: flex;
+    justify-content:end;
+    margin-right: 18px;
+
+}
+.btn {
+    position: relative;
+    color: rgba(86, 148, 255, 0.45);
+    display: flex;
+    text-transform: uppercase;
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+    border-radius: 3px;
+    background: rgba(49,157,169,0.06);
+    justify-content: end;
+
+
+}
+
+.btn:hover,
+.btn:active{
+    box-shadow: 0 0 10px rgba(86,148,255,0.45);
+    color: blue;
+
+
+}
+.btn:focus {
+    box-shadow: 0 0 10px rgba(86,148,255,0.45), 0 0 40px rgba(86,148,255,0.45);
+}
+.btn:active {
+
+}
+
+
+
+
+.btn_line{
+    position: absolute;
+    display: block;
+}
+
+.btn_line--top{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,rgba(86,148,255,0.45)) ;
+
+}
+.btn:hover .btn_line--top{
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.btn_line--bottom{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,rgba(86,148,255,0.45)) ;
+
+}
+.btn:hover .btn_line--bottom{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.btn_line--left{
+    bottom: -100%;
+    left: 0;
+    width:2px;
+    height: 100%;
+    background: linear-gradient(0deg,transparent,rgba(86,148,255,0.45)) ;
+
+}
+.btn:hover .btn_line--left{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+.btn_line--right{
+    top:  -100%;
+    right: 0;
+    width: 2px ;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,rgba(86,148,255,0.45)) ;
+
+}
+.btn:hover .btn_line--right{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0s;
+}
+
+
+
+
+
+
