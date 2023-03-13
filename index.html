@@ -8,31 +8,65 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 <div class="main">
   <form>
-    <section class="container">
+    <section class="advertising">
+        <div class="icon"></div>
+        <div class="arrow_container">
+            <div class="banner_one">
+                <div class="banner">Now save <strong>$112</strong> instantly</div>
+                <p>When you buy 8 boxes <span class="fake_question"></span></p>
+            </div>
+            <div class="banner_two">
+                <p>$83.86 /Box</p>
+                <p>for 8 boxes</p>
+                <p>$97.86 /Box</p>
+                <p>Single Box price</p>
+                <button type="button" id="btn_order" class="btn_order">Order now</button>
+            </div>
+        </div>
+    </section>
+      <div class="form_main">
+    <section class="container_radio">
               <label  class="quick-lens-supply"  data-quantity="2">
-                  <div class="label_radio">
-                      <input  class="input" name="lens-supply-radio" type="radio" checked>
+                  <div class="label_radio active" id="twelve_month">
+                      <input  class="input"  name="lens-supply-radio" type="radio" checked>
                       <span class="fake"></span>
                       <span class="title"><strong style="text-transform: uppercase ">12 Month Supply</strong></span>
-                      <div class="subtext">(2 Boxes Per Eye)</div>
+                      <div class="subtext">(4 Boxes Per Eye)</div>
+                      <div class="subtext">&#36; 83.86 /Box</div>
                   </div>
               </label>
 
 
               <label  class="quick-lens-supply" data-quantity="1">
-                    <div class="label_radio">
+                    <div class="label_radio" id="six_month">
                           <input  class="input" name="lens-supply-radio" type="radio" >
                           <span class="fake"></span>
                           <span class="title"><strong style="text-transform: uppercase ">6 Month Supply</strong></span>
-                          <div class="subtext">(1 Box Per Eye)</div>
+                          <div class="subtext">(2 Box Per Eye)</div>
+                        <div class="subtext">&#36; 85.36 /Box</div>
                     </div>
               </label>
+
+            <label  class="quick-lens-supply" data-quantity="1">
+                <div class="label_radio" id="three_month">
+                    <input  class="input" name="lens-supply-radio" type="radio" >
+                    <span class="fake"></span>
+                    <span class="title"><strong style="text-transform: uppercase ">3 Month Supply</strong></span>
+                    <div class="subtext">(1 Box Per Eye)</div>
+                    <div class="subtext">&#36; 97.86 /Box</div>
+                </div>
+            </label>
     </section>
 
+    <section class="change_eyes">
+        <input id="both_eyes" type="checkbox">
+        <label for="both_eyes"><span>Same prescription for both eyes ?</span></label>
+    </section>
 
 
       <section class="container_two">
@@ -53,15 +87,14 @@
               </li>
               <li class="row">
                   <p>BC</p>
-                  <div class="select">
+                  <div class="select bc">
                       <select aria-label="Right Eye Base Curve (BC)" class="customChevron" id="rightEye_BaseCurve" name="rightEye.BaseCurve" title="Right Eye Base Curve (BC)"><option value=""></option><option value="8.4">8.4</option><option value="8.8">8.8</option></select>
                   </div >
                       <div class="select">
-
                       <select aria-label="Left Eye Base Curve (BC)" class="customChevron" id="leftEye_BaseCurve" name="leftEye.BaseCurve" title="Left Eye Base Curve (BC)"><option value=""></option><option value="8.4">8.4</option><option value="8.8">8.8</option></select>
                   </div>
               </li>
-              <li class="row_p">
+              <li class="row_p dia">
                   <p><strong>DIA</strong></p>
                   <p>14.0</p>
                   <p>14.0</p>
@@ -69,25 +102,52 @@
               <li class="row">
                   <p>Boxes</p>
                   <div class="select">
-                      <select aria-label="Right Eye Quantity" class="quantity-dropdown customChevron valid" id="rightEyeQuantity" name="rightEyeQuantity" title="Right Eye Quantity" aria-invalid="false"><option value="0">0</option><option value="1">1</option><option selected="" value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                      <select aria-label="Right Eye Quantity" class="quantity-dropdown customChevron valid" id="rightEyeQuantity" name="rightEyeQuantity" title="Right Eye Quantity" aria-invalid="false"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
                   </div >
                       <div class="select">
-                      <select aria-label="Left Eye Quantity" class="quantity-dropdown customChevron valid" id="leftEyeQuantity" name="leftEyeQuantity" title="Left Eye Quantity" aria-invalid="false"><option value="0">0</option><option value="1">1</option><option selected="" value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
+                      <select aria-label="Left Eye Quantity" class="quantity-dropdown customChevron valid" id="leftEyeQuantity" name="leftEyeQuantity" title="Left Eye Quantity" aria-invalid="false"><option value="0">0</option><option value="1">1</option><option  value="2">2</option><option value="3">3</option><option selected="" value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option></select>
                   </div>
               </li>
           </ul>
 
-          <div class="btn_container">
-              <button type="submit"class="btn">
-                  <span class="btn_line btn_line--top"></span>
-                  <span class="btn_line btn_line--right"></span>
-                  <span class="btn_line btn_line--bottom"></span>
-                  <span class="btn_line btn_line--left"></span>
-                  Buy now </button>
-          </div>
+          <section class="btn_container">
+              <div class="container_cost">
+                  <p>standard cost :<span class="data_cost"></span></p>
+                  <p>discount :<span class="data_cost"></span></p>
+                  <p><strong>total cost :<span class="data_cost"></span></strong></p>
+              </div>
+              <div>
+                  <button type="submit"class="btn">
+                      <span class="btn_line btn_line--top"></span>
+                      <span class="btn_line btn_line--right"></span>
+                      <span class="btn_line btn_line--bottom"></span>
+                      <span class="btn_line btn_line--left"></span>
+                      Buy now </button>
+              </div>
+          </section>
       </section>
+      </div>
   </form>
 </div>
 
+
+
+<div id="popup" class="popup">
+    <div class="popup_body">
+        <div class="popup_content">
+            <div class="container_button">
+                <button type="button" class="button button_cancel close_popup"></button>
+            </div>
+            <div class="text">
+                <h2>Buy More, <strong>Save</strong> More</h2>
+                <p>It might seem to go against any rules of logic, but hear us out - the more you buy at once, the more you save. When we pack and ship multiple items, our shipping costs are slashed and those savings are passed on to you. It's just one more way we say thank you to our customers. </p>
+                <br>
+                <p>*Please note that Walmart Buy More Save More Pricing cannot be combined with insurance.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
+<script src="index.js" defer></script>
 </html>
