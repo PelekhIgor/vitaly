@@ -12,7 +12,9 @@
     border: 1px solid  rgba(86,148,255,0.45);
     padding: 15px;
     border-top: none;
+    min-width: 0;
 }
+
 .advertising{
     border: 1px solid  rgba(86,148,255,0.45);
     min-height: 100px;
@@ -63,7 +65,7 @@
 .btn_order:hover,
 .btn_order:active{
     box-shadow: 0 0 10px rgba(86,148,255,0.45);
-    color: blue;
+    color:  #3690d0;
 
 }
 .btn_order:focus {
@@ -159,7 +161,7 @@
     border-radius: 50%;
     width: 10px;
     height: 10px;
-    background-color: blue;
+    background-color:  #3690d0;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -171,7 +173,7 @@
     opacity: 1;
 }
 .input:checked + .fake {
-    border: 1px solid blue;
+    border: 1px solid  #3690d0;
 }
 .label_radio{
     padding: 15px 0 10px 10px;
@@ -183,7 +185,7 @@
 
 }
 .active{
-    border: 2px solid blue;
+    border: 2px solid  #3690d0;
 }
 
 .label_radio:active {
@@ -286,7 +288,7 @@ select{
     color: rgba(86,148,255,0.45);
 }
 .select:hover::after{
-    color: blue;
+    color:  #3690d0;
 }
 .btn_container{
     display: flex;
@@ -298,6 +300,7 @@ select{
     text-transform: uppercase;
     color: #3690d0;
 }
+
 .container_cost>p:last-of-type{
     color: red;
 }
@@ -321,7 +324,7 @@ select{
 .btn:hover,
 .btn:active{
     box-shadow: 0 0 10px rgba(86,148,255,0.45);
-    color: blue;
+    color:  #3690d0;
 
 }
 .btn:focus {
@@ -473,6 +476,37 @@ h2::before{
 
 
 @media (max-width: 795px) {
+    .slick-slide{
+        margin: 0 10px;
+    }
+    .slick-arrow{
+        position: absolute;
+        top: 40%;
+        font-size: 0;
+    }
+    .slick-dots{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin-top: -10px;
+    }
+    .slick-dots li{
+        list-style: none;
+        margin: 0 7px;
+    }
+    .slick-dots button{
+        font-size: 0;
+        width: 7px;
+        height: 7px;
+        background-color: #3690d0;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+    }
+    .slick-dots li.slick-active button{
+        background-color: transparent;
+        border: 1px solid #3690d0;
+    }
     .arrow_container{
         display: inline-block;
     }

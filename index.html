@@ -7,6 +7,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Form</title>
+
+
+
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -30,8 +33,9 @@
         </div>
     </section>
       <div class="form_main">
-    <section class="container_radio">
-              <label  class="quick-lens-supply"  data-quantity="2">
+    <section id="items" class="container_radio">
+
+              <label  class="quick-lens-supply item"  data-quantity="2">
                   <div class="label_radio active" id="twelve_month">
                       <input  class="input"  name="lens-supply-radio" type="radio" checked>
                       <span class="fake"></span>
@@ -41,8 +45,7 @@
                   </div>
               </label>
 
-
-              <label  class="quick-lens-supply" data-quantity="1">
+              <label  class="quick-lens-supply item" data-quantity="1">
                     <div class="label_radio" id="six_month">
                           <input  class="input" name="lens-supply-radio" type="radio" >
                           <span class="fake"></span>
@@ -52,7 +55,7 @@
                     </div>
               </label>
 
-            <label  class="quick-lens-supply" data-quantity="1">
+            <label  class="quick-lens-supply item" data-quantity="1">
                 <div class="label_radio" id="three_month">
                     <input  class="input" name="lens-supply-radio" type="radio" >
                     <span class="fake"></span>
@@ -61,6 +64,7 @@
                     <div class="subtext">&#36; 97.86 /Box</div>
                 </div>
             </label>
+
     </section>
 
     <section class="change_eyes">
@@ -112,9 +116,9 @@
 
           <section class="btn_container">
               <div class="container_cost">
-                  <p>standard cost :<span class="data_cost"></span></p>
-                  <p>discount :<span class="data_cost"></span></p>
-                  <p><strong>total cost :<span class="data_cost"></span></strong></p>
+                  <p>standard cost : <span id="data_cost"></span></p>
+                  <p>discount : <span id="data_discount"></span></p>
+                  <p><strong>total cost : <span id="data_total"></span></strong></p>
               </div>
               <div>
                   <button type="submit"class="btn">
@@ -148,6 +152,14 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+<script src="index.js"></script>
+
 </body>
-<script src="index.js" defer></script>
+
+
+
+
 </html>
